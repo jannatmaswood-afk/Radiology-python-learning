@@ -1,29 +1,19 @@
-#Radiology Department Daily workload Tracker
-# Day 01: Basics before conditional statements
-department = input("enter department name:")
-report_date = input("enter report date (YYYY-MM-DD:"))
-xray_exams = int(input(enter xray examination:"))
-ct_exams = int(input(enter ct examination:"))
-mri_exams = int(input("enter MRI examination:"))
-working_hours = float (input("enter working hours:"))
-yesterday_total = int(input(enter yesterday's total examination:"))
-daily_target = int(input(enter today 's workload target:"))
-#Arithmetic calculation
-total_exams = xray_exams + ct_exams + mri_exams
-exams_per_hour = total_exams/working_hours
-workload_change = total_exams - yesterday_total
-#comparisons
-target_reached = total_exams >= daily_target
-busier_than_yesterday = total_exams > yesterday_total
-#display the report
-print("\nRadiology daily workload report")
-print(f"department:{department}")
-print(f"date:{report_date}")
-print(f"X-ray examination:{xray_exams}") 
-print(f"CT examination:{ct_exams}")
-print(f"MRI examination:{mri_exams}")
-print(f"total examination:{total_exam}")
-print(f"average examination per hour :{exams_per_hour})
-print(f"changed compared with yesterday:{workload_change}")
-print(f"daily target reached:{target_reached}")
-print(f"busier than yesterday:{busier_than_yesterday}")
+# Day 1: Analysis of a hypothetical radiology  dataset
+# integer which represents the number of slices in a CT scan and no decimal values are allowed
+#float which represents the slice thickness in millimeters and decimal values are allowed
+#string(str) represents the quotation marks around the modality name
+#boolean which represents the presence of contrast in the scan and can only be True or False
+modality = "CT"
+number_of_slices = 240
+rows = 512
+columns = 512
+slice_thickness_mm = 0.625
+pixels_per_slice = rows * columns
+total_pixels = pixels_per_slice * number_of_slices
+print("Modality:", modality)
+print("Number of Slices:", number_of_slices)
+print("Rows:", rows)
+print("Columns:", columns)
+print("Slice Thickness (mm):", slice_thickness_mm)
+print("Pixels per Slice:", pixels_per_slice)
+print("Total pixels across slices:", total_pixels)
